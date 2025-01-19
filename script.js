@@ -26,10 +26,6 @@ class Employee extends Person {
   }
 }
 
-// Example test cases
-const person = new Person("Alice", 25);
-person.greet();  // Expected output: Hello, my name is Alice, I am 25 years old.
-
-const employee = new Employee("Bob", 30, "Manager");
-employee.jobGreet();  // Expected output: Hello, my name is Bob, I am 30 years old, and my job title is Manager.
-employee.greet();  // Inherited from Person class: Hello, my name is Bob, I am 30 years old.
+// Make Person and Employee globally accessible
+window.Person = Person;
+window.Employee = Employee;
